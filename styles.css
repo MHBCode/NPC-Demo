@@ -286,3 +286,28 @@ tbody{
 .mainTR{
     color: #b6b6b6;
 }
+.noMobile{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 999;
+    height: 100vh;
+    width: 94vw;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    background-color: #8A1538;
+    color: white;
+    padding: 0 2vw;
+    text-align: right;
+}
+@media screen and (max-width: 700px) {
+    .noMobile{
+        display: flex;
+    }
+    .pageSection{
+        display: none;
+    }
+}
