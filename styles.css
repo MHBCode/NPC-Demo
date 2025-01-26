@@ -300,7 +300,7 @@ tbody{
     justify-content: center;
     background-color: #8A1538;
     color: white;
-    padding: 0 2vw;
+    padding: 0 3vw;
     text-align: right;
 }
 @media screen and (max-width: 700px) {
@@ -308,6 +308,9 @@ tbody{
         display: flex;
     }
     .pageSection{
+        display: none;
+    }
+    .main-header{
         display: none;
     }
 }
