@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header class="main-header">
+        <div class="logoSection">
+            <img src="assets/images/npc-site-logo.png">
+        </div>
+        <div class="userDataSection">
+            <div class="userImgContainer">
+                <img class="userImg" src="assets/images/1697195973305.jpg">
+            </div>
+            <div class="sittingsMenu">
+                <i class="bi bi-gear-wide-connected"></i>
+            </div>
+            <div class="sittingsMenu">
+                <i class="bi bi-translate"></i>
+            </div>
+        </div>
+    </header>
+    <section class="greetingsSection pageSection">
+        <button class="btn-1">
+            إنشاء طلب جديد
+            <i class="bi bi-file-earmark-plus-fill"></i>
+        </button>
+        <p class="greeetingParagraph">
+            <img src="assets/images/waving-hand.png"/>
+            أنس حمزة
+            <span>
+                اهلاً وسهلاً
+            </span>
+        </p>
+    </section>
+    <section class="cardSection pageSection">
+        <div class="cardSectionCard listCard">
+            <ul class="notificationList">
+                <li class="main-li">
+                    <div>
+
+                    </div>
+                    <h2>
+                        إشعاراتي
+                    </h2>
+                </li>
+                <li>
+                    <span class="classification c-Confidential">
+                        سري
+                    </span>
+                    <div class="aboutNotification">
+                        <p class="notifiactionTitle">
+                            للمراجعه
+                            REQ-2025-100980
+                            تم إرسال طلبك رقم 
+                        </p>
+                        <p class="date">
+                            التاريخ: 1/16/2025
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <span class="classification c-Public">
+                        عام
+                    </span>
+                    <div class="aboutNotification">
+                        <p class="notifiactionTitle">
+                            REQ-2024-100100
+                            تم قبول طلبك رقم 
+                        </p>
+                        <p class="date">
+                            التاريخ: 9/20/2024
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <span class="classification c-Restricted">
+                        مقيد
+                    </span>
+                    <div class="aboutNotification">
+                        <p class="notifiactionTitle">
+                            لإستكمال النواقص
+                            REQ-2025-108654
+                            تم إرجاع طلبك رقم 
+                        </p>
+                        <p class="date">
+                            التاريخ: 1/20/2025
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <span class="classification c-HighlyConfidential">
+                        سري للغايه
+                    </span>
+                    <div class="aboutNotification">
+                        <p class="notifiactionTitle">
+                            REQ-2025-10093
+                            تم رفض طلبك رقم 
+                        </p>
+                        <p class="date">
+                            التاريخ: 1/1/2025
+                        </p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="cardSectionCard boardCard">
+            <h2 class="sectionHeader">
+                إحصائيات الطلبات
+            </h2>
+            <canvas id="requestsChart" width="350" height="350"></canvas>
+        </div>
+        <div class="cardSectionCard dataCard">
+            <div class="inProgressRequest">
+                <p class="requestNumber">
+                    <span>
+                        REQ-2025-10987
+                    </span>
+                    رقم الطلب
+                </p>
+                <p class="requestStatus">
+                    <span>
+                        تحت المراجعه
+                    </span>
+                    حالة الطلب
+                </p>
+                <div class="lastUpdate">
+                    <p class="requestStatisitcs">
+                        <span>
+                            سري للغايه
+                        </span>
+                         مدى السريه
+                    </p>
+                    <p class="requestStatisitcs">
+                        <span>
+                            25/1/2025
+                        </span>
+                         اخر تعديل
+                    </p>
+                    <p class="requestStatisitcs">
+                        <span>
+                            25/1/2025
+                        </span>
+                         تاريخ الإنشاء
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="tableSection pageSection">
+        <table class="requestsTable">
+            <tbody>
+                <tr>
+                    <td class="mainTR">
+                        سبب الطلب
+                    </td>
+                    <td>سبب الطلب</td>
+                    <td>سبب الطلب</td>
+                    <td>سبب الطلب</td>
+                    <td>سبب الطلب</td>
+                </tr>
+                <tr>
+                    <td class="mainTR">
+                        تاريخ التقديم
+                    </td>
+                    <td>2025-01-20</td>
+                    <td>2025-01-20</td>
+                    <td>2025-01-20</td>
+                    <td>2025-01-20</td>
+                </tr>
+                <tr>
+                    <td class="mainTR">
+                        حالة الطلب
+                    </td>
+                    <td>مقبول</td>
+                    <td>مقبول</td>
+                    <td>مقبول</td>
+                    <td>مقبول</td>
+                </tr>
+                <tr>
+                    <td class="mainTR">
+                        اسم الشركة
+                    </td>
+                    <td>شركة DEF</td>
+                    <td>شركة DEF</td>
+                    <td>شركة DEF</td>
+                    <td>شركة DEF</td>
+                </tr>
+                <tr>
+                    <td class="mainTR">
+                        اسم الجهة
+                    </td>
+                    <td>وزارة النقل</td>
+                    <td>وزارة النقل</td>
+                    <td>وزارة النقل</td>
+                    <td>وزارة النقل</td>
+                </tr>
+                <tr>
+                    <td class="mainTR">
+                        اسم المتقدم
+                    </td>
+                    <td>سارة علي</td>
+                    <td>سارة علي</td>
+                    <td>سارة علي</td>
+                    <td>سارة علي</td>
+                </tr>
+                <tr>
+                    <td class="mainTR">رقم الطلب</td>
+                    <td>REQ-2025-10987</td>
+                    <td>REQ-2025-10987</td>
+                    <td>REQ-2025-10987</td>
+                    <td>REQ-2025-10987</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <script src="dashbaord.js"></script>
+</body>
+</html>

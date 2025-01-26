@@ -1,0 +1,288 @@
+@import url('https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css');
+
+
+*{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: normal;
+    font-size: 14px;
+}
+body{
+    margin: 0;
+    flex-direction: column;
+    row-gap: 1rem;
+}
+.main-header{
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 2vw;
+    width: 98vw;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.userDataSection{
+    background-color: #8A1538;
+    flex-direction: row;
+    gap: 0.5rem;
+    color: white;
+    padding: 1rem 1rem;
+    border-radius: 27px;
+}
+.greeetingParagraph{
+    font-weight: 100;
+    background: transparent;
+    color: #8A1538;
+    height: 30px;
+    border-radius: 10px;
+    padding: 0 0.2rem;
+    margin: 0;
+}
+.greeetingParagraph span{
+    color: #c4a300;
+    margin: 0 4px;
+}
+.greeetingParagraph img{
+    width: auto;
+    height: 30px;
+}
+.logoSection{
+    background: transparent;
+}
+.logoSection img{
+    width: 200px;
+    height: auto;
+}
+.userImgContainer{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.userImg{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.sittingsMenu{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: rgba(255, 255, 255, 0.586);
+    color: #8A1538;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.pageSection{
+    width: 94%;
+}
+.greetingsSection{
+    width: 94%;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+    row-gap: 1rem;
+    padding: 1rem 0;
+}
+.btn-1{
+    /* background-color: #8A1538; */
+    background: linear-gradient(135deg, #8A1538, #b30d34);
+    color: white;
+    align-items: center;
+    justify-content: center;
+    padding: 0.8rem;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+}
+.btn-1:hover{
+    background: linear-gradient(135deg, white, white);
+    background-color: white;
+    color: #c4a300;
+    /* border: 1px solid #8A1538; */
+    transition: 10ms ease-in-out;
+}
+.btn-1 i{
+    margin: 0 4px;
+    padding: 1px;
+}
+.cardSection{
+    gap: 1.6rem;
+}
+.cardSectionCard{
+    flex: 1;
+    height: 300px;
+    border-radius: 30px 0 30px 0;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    position: relative;
+}
+.sectionHeader{
+    position: absolute;
+    top: 0.5rem;
+    right: 1rem;
+}
+.boardCard{
+    background-color:white; 
+    flex-direction: column;
+}
+.listCard{
+    background-color: #f5f3f3;
+    align-items: flex-start;
+}
+.dataCard{
+    /* background-color: #867105; */
+    background: linear-gradient(135deg, #867105, #f2b705);
+}
+.notificationList{
+    flex-direction: column;
+    padding: 0 3%;
+    width: 94%;
+    justify-content: flex-start;
+    margin: 0.2rem;
+}
+.notificationList li{
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0.7rem 0;
+}
+.notificationList li:not(:last-child) {
+    border-bottom: 1px solid #ccc; /* Add border to all except the last one */
+}
+.main-li{
+    border: none !important;
+}
+.aboutNotification{
+    flex-direction: column;
+    align-items: end;
+    justify-content: center;
+}
+.aboutNotification p{
+    margin: 0;
+}
+.notifiactionTitle{
+    color: #8A1538;
+    font-weight: 300;
+}
+.date{
+    color: #b6b6b6;
+    font-size: 10px;
+}
+.classification{
+    border-radius: 13px;
+    border: none;
+    padding: 3px 7px 5px;
+    color: white;
+    min-width: 40px;
+}
+.c-Confidential{
+    background-color: #f11d16;
+}
+.c-HighlyConfidential{
+    background-color: #8B0000;
+}
+.c-Public{
+    background-color: #28A745;
+}
+.c-Restricted{
+    background-color: #004085;
+}
+.inProgressRequest{
+    width: 86%;
+    height: 80%;
+    background-color: rgba(255, 255, 255, 0.16);
+    border-radius: 30px;
+    position: relative;
+}
+.requestNumber{
+    position: absolute;
+    top: 1rem;
+    right: 2rem;
+    color: white;
+    gap: 0.5rem;
+    flex-direction: column-reverse;
+    align-items: end;
+}
+.requestNumber span{
+    color: #8B0000;
+}
+.requestStatus{
+    position: absolute;
+    top: 1rem;
+    left: 2rem;
+    color: white;
+    gap: 0.5rem;
+    flex-direction: column-reverse;
+    align-items: end;
+}
+.requestStatus span{
+    border-radius: 13px;
+    border: none;
+    padding: 3px 7px 5px;
+    color: white;
+    min-width: 40px;
+    background-color: #1a5276;
+}
+.lastUpdate{
+    position: absolute;
+    top: 7rem;
+    left: 2rem;
+    right: 2rem;
+    height: 50%;
+    background-color: rgba(255, 255, 255, 0.103);
+    color: white;
+    /* gap: 0.5rem; */
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 13px;
+}
+.requestStatisitcs{
+    gap: 0.5rem;
+    flex-direction: column-reverse;
+    align-items: end;
+    padding: 0.3rem;
+}
+.requestsTable {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    border-radius: 8px;
+    display: unset;
+}
+
+.requestsTable th, .requestsTable td {
+    padding: 10px 15px;
+    text-align: center;
+    /* border-bottom: 1px solid #ddd; */
+}
+
+.requestsTable th {
+    color: rgb(114, 114, 114);
+    font-weight: bold;
+}
+
+.requestsTable tr:nth-child(even) {
+    background-color: white;
+}
+
+.requestsTable tr:hover {
+    background-color: white;
+}
+tbody tr{
+    background-color: white;
+    display: unset;
+
+}
+tbody{
+    justify-content: space-between;
+
+}
+.mainTR{
+    color: #b6b6b6;
+}
