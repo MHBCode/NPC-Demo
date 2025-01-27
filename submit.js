@@ -57,6 +57,7 @@ function submitForm() {
     })
     .then(response => {
         if (response.ok) {
+            console.log("response :", response);
             alert('Form submitted successfully!');
         } else {
             alert('Error submitting form.');
