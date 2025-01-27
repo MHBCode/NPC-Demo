@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Request Form</title>
+    <link rel="stylesheet" href="submitRequest.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="logoSection">
+            <img src="assets/images/npc-site-logo.png">
+        </div>
+        <div class="userDataSection">
+            <div class="userImgContainer">
+                <img class="userImg" src="assets/images/1697195973305.jpg">
+            </div>
+            <div class="sittingsMenu">
+                <i class="bi bi-gear-wide-connected"></i>
+            </div>
+            <div class="sittingsMenu">
+                <i class="bi bi-translate"></i>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="lang-switch">
+            <button onclick="switchLanguage('en')">English</button>
+            <button onclick="switchLanguage('ar')">العربية</button>
+        </div>
+        <h1 id="formTitle">External Data Sharing Request </h1>
+        <form id="dataRequestForm">
+            <section>
+                <h2 id="personalInfoTitle">Requestor Information</h2>
+                <div class="form-group">
+                    <label for="fullName" id="fullNameLabel">Full Name</label>
+                    <input type="text" id="fullName" name="FullName" required>
+                </div>
+                <div class="form-group">
+                    <label for="emailAddress" id="emailLabel">Email Address</label>
+                    <input type="email" id="emailAddress" name="EmailAddress" required>
+                </div>
+                <div class="form-group">
+                    <label for="phoneNumber" id="phoneLabel">Phone Number</label>
+                    <input type="text" id="phoneNumber" name="PhoneNumber" required>
+                </div>
+                <div class="form-group">
+                    <label for="jobTitle" id="jobTitleLabel">Job Title</label>
+                    <input type="text" id="jobTitle" name="JobTitle" required>
+                </div>
+                <div class="form-group">
+                    <label for="departmentName" id="deptNameLabel">Department Name</label>
+                    <input type="text" id="departmentName" name="DepartmentName" required>
+                </div>
+                <div class="form-group">
+                    <label for="sectionName" id="sectionLabel">Section Name</label>
+                    <input type="text" id="sectionName" name="SectionName" required>
+                </div>
+                <div class="form-group">
+                    <label for="departmentManager" id="deptManagerLabel">Department Manager</label>
+                    <input type="text" id="departmentManager" name="DepartmentManager" required>
+                </div>
+            </section>
+
+
+            <section>
+                <h2 id="requestDetailsTitle">Data Sharing Request Details</h2>
+
+                <div class="form-group">
+                    <label for="entityName" id="entityLabel">Entity Name</label>
+                    <input type="text" id="entityName" name="EntityName" required>
+                </div>
+                <div class="form-group">
+                    <label for="dataOwner" id="dataOwnerLabel">Data Owner Name</label>
+                    <input type="text" id="dataOwner" name="DataOwner" required>
+                </div>
+                <div class="form-group">
+                    <label for="requestedDataDescription" id="dataDescLabel">Requested Data Description</label>
+                    <textarea id="requestedDataDescription" name="RequestedDataDescription" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="reasonForRequest" id="reasonLabel">Reason for Request</label>
+                    <textarea id="reasonForRequest" name="ReasonForRequest" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="dataClassification" id="dataClassLabel">Data Classification</label>
+                    <input type="number" id="dataClassification" name="DataClassification" required>
+                </div>
+                <div class="form-group">
+                    <label for="frequency" id="freqLabel">Frequency</label>
+                    <input type="number" id="frequency" name="Frequency" required>
+                </div>
+                <div class="form-group">
+                    <label for="duration" id="durationLabel">Duration</label>
+                    <input type="text" id="duration" name="Duration" required>
+                </div>
+            </section>
+
+            <button type="button" class="submit-button" onclick="submitForm()">Submit</button>
+        </form>
+    </div>
+    <script>
+        function switchLanguage(lang) {
+            const translations = {
+                en: {
+                    formTitle: "External Data Sharing Request",
+                    personalInfoTitle: "Requestor Information",
+                    fullNameLabel: "Full Name",
+                    emailLabel: "Email Address",
+                    phoneLabel: "Phone Number",
+                    jobTitleLabel: "Job Title",
+                    deptNameLabel: "Department Name",
+                    sectionLabel: "Section Name",
+                    deptManagerLabel: "Department Manager",
+                    
+                    requestDetailsTitle: "Data Sharing Request Details",
+                    entityLabel: "Entity Name",
+                    dataOwnerLabel: "Data Owner",
+                    dataDescLabel: "Requested Data Description",
+                    reasonLabel: "Reason for Request",
+                    dataClassLabel: "Data Classification",
+                    freqLabel: "Frequency",
+                    durationLabel: "Duration"
+                },
+                ar: {
+                    formTitle: "طلب مشاركة بيانات داخل المجلس",
+                    personalInfoTitle: "معلومات مقدم الطلب",
+                    fullNameLabel: "\u0627\u0644\u0627\u0633\u0645 \u0627\u0644\u0643\u0627\u0645\u0644",
+                    emailLabel: "\u0627\u0644\u0628\u0631\u064a\u062f \u0627\u0644\u0627\u0644\u0643\u062a\u0631\u0648\u0646\u064a",
+                    phoneLabel: "\u0631\u0642\u0645 \u0627\u0644\u0647\u0627\u062a\u0641",
+                    jobTitleLabel: "\u0627\u0644\u0645\u0633\u0645\u0649 \u0627\u0644\u0648\u0638\u064a\u0641\u064a",
+                    deptNameLabel: "اسم الإدارة",
+                    sectionLabel: "اسم القسم",
+                    deptManagerLabel: "مدير الإدارة",
+                    
+                    requestDetailsTitle: "تفاصيل طلب مشاركة البيانات",
+                    entityLabel: "\u0627\u0633\u0645 \u0627\u0644\u0645\u0646\u0638\u0645\u0629",
+                    dataOwnerLabel: "\u0645\u0627\u0644\u0643 \u0627\u0644\u0628\u064a\u0627\u0646\u0627\u062a",
+                    dataDescLabel: "\u0648\u0635\u0641 \u0627\u0644\u0628\u064a\u0627\u0646\u0627\u062a \u0627\u0644\u0645\u0637\u0644\u0648\u0628\u0629",
+                    reasonLabel: "\u0633\u0628\u0628 \u0627\u0644\u0637\u0644\u0628",
+                    dataClassLabel: "\u062a\u0635\u0646\u064a\u0641 \u0627\u0644\u0628\u064a\u0627\u0646\u0627\u062a",
+                    freqLabel: "\u062a\u0643\u0631\u0627\u0631",
+                    durationLabel: "\u0627\u0644\u0645\u062f\u0629"
+                }
+            };
+
+            const elements = translations[lang];
+            for (const id in elements) {
+                document.getElementById(id).textContent = elements[id];
+            }
+
+            const html = document.documentElement;
+            html.lang = lang;
+            html.dir = lang == 'en'? 'ltr': 'rtl';
+        }
+
+        function submitForm() {
+            alert("Form submitted!"); // Placeholder for form submission logic
+        }
+    </script>
+</body>
+</html>
