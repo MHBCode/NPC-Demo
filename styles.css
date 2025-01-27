@@ -178,18 +178,22 @@ body{
     color: white;
     min-width: 40px;
 }
-.c-Confidential{
-    background-color: #f11d16;
+.c-Confidential {
+    background: linear-gradient(135deg, #d31b15, #ff4d4a);
 }
-.c-HighlyConfidential{
-    background-color: #8B0000;
+
+.c-HighlyConfidential {
+    background: linear-gradient(135deg, #8B0000, #b22222);
 }
-.c-Public{
-    background-color: #28A745;
+
+.c-Public {
+    background: linear-gradient(135deg, #28A745, #5cd65c);
 }
-.c-Restricted{
-    background-color: #004085;
+
+.c-Restricted {
+    background: linear-gradient(135deg, #004085, #337ab7);
 }
+
 .inProgressRequest{
     width: 86%;
     height: 80%;
@@ -224,7 +228,7 @@ body{
     padding: 3px 7px 5px;
     color: white;
     min-width: 40px;
-    background-color: #1a5276;
+    background: linear-gradient(135deg, #1a5276, #146fac);
 }
 .lastUpdate{
     position: absolute;
