@@ -27,7 +27,7 @@ body{
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 .userDataSection{
-    background-color: #8A1538;
+    background: linear-gradient(135deg, #8A1538, #b30d34);
     flex-direction: row;
     gap: 0.5rem;
     color: white;
@@ -80,10 +80,10 @@ body{
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 .pageSection{
-    width: 94%;
+    width: 100%;
 }
 .greetingsSection{
-    width: 94%;
+    width: 100%;
     flex-direction: row;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -120,9 +120,14 @@ body{
 .cardSectionCard{
     flex: 1;
     height: 300px;
-    border-radius: 30px 0 30px 0;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     position: relative;
+}
+.leftCard{
+    border-radius: 15px 0 0 15px;
+}
+.rightCard{
+    border-radius: 0 15px 15px 0;
 }
 .sectionHeader{
     position: absolute;
@@ -136,6 +141,9 @@ body{
 .listCard{
     background-color: #f5f3f3;
     align-items: flex-start;
+    overflow: hidden;
+    overflow-y: scroll;
+    scrollbar-width: thin;
 }
 .dataCard{
     /* background-color: #867105; */
@@ -154,6 +162,9 @@ body{
     justify-content: space-between;
     width: 100%;
     padding: 0.7rem 0;
+}
+.notificationList li h2{
+    margin: 0;
 }
 .notificationList li:not(:last-child) {
     border-bottom: 1px solid #ccc; /* Add border to all except the last one */
@@ -206,7 +217,7 @@ body{
 
 .inProgressRequest{
     width: 86%;
-    height: 80%;
+    height: 86%;
     background-color: rgba(255, 255, 255, 0.16);
     border-radius: 30px;
     position: relative;
@@ -228,7 +239,7 @@ body{
     top: 1rem;
     left: 2rem;
     color: white;
-    gap: 0.5rem;
+    gap: 0.3rem;
     flex-direction: column-reverse;
     align-items: end;
 }
@@ -325,6 +336,9 @@ tbody{
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     padding: 0 0 0.5rem 0;
     border-radius: 18px;
+    /* width: 48%; */
+    flex: 1;
+    background: white;
 }
 .checkAll{
     width: 100%;
@@ -333,7 +347,13 @@ tbody{
     justify-content: start;
 }
 .checkAllIC{
-    width: 50px;;
+    width: 96%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 2%;
+}
+.checkAllIC h3{
+    margin: 0;
 }
 .checkAllIC i{
     width: 25px;
@@ -341,6 +361,17 @@ tbody{
     color: black;
     font-size: 25px;
     cursor: pointer;
+}
+.tablesWrapper{
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 94vw;
+    gap: 1.5rem;
+    background: transparent;
+}
+tbody{
+    background: white;
 }
 @media screen and (max-width: 700px) {
     .noMobile{

@@ -7,7 +7,7 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
-    <header class="main-header">
+    <!-- <header class="main-header">
         <div class="logoSection">
             <img src="assets/images/npc-site-logo.png">
         </div>
@@ -22,7 +22,7 @@
                 <i class="bi bi-translate"></i>
             </div>
         </div>
-    </header>
+    </header> -->
     <section class="greetingsSection pageSection">
         <div>
             <a class="btn-1" href="submitRequest.html">
@@ -49,7 +49,7 @@
     </section>
 
     <section class="cardSection pageSection">
-        <div class="cardSectionCard listCard">
+        <div class="cardSectionCard listCard leftCard">
             <ul class="notificationList">
                 <li class="main-li">
                     <div>
@@ -127,7 +127,7 @@
             <canvas id="requestsChart" width="350" height="350"></canvas>
         </div>
 
-        <div class="cardSectionCard dataCard">
+        <div class="cardSectionCard dataCard rightCard">
             <div class="inProgressRequest">
                 <p class="requestNumber">
                     <span>
@@ -164,95 +164,106 @@
             </div>
         </div>
     </section>
-
-    <section class="tableSection pageSection">
-        <div class="checkAll">
-            <div class="checkAllIC">
-                <i class="bi bi-box-arrow-in-up-left"></i>
+    <section class="tablesWrapper">
+        <section class="tableSection">
+            <div class="checkAll">
+                <div class="checkAllIC">
+                    <i class="bi bi-box-arrow-in-up-left"></i>
+                    <h3>
+                        المهام
+                    </h3>
+                </div>
             </div>
-        </div>
-        <table class="requestsTable">
-            <tbody>
-                <tr>
-                    <td class="mainTR">
-                        المدة الزمنية لمشاركة البيانات
-                    </td>
-                    <td>
-                        10 أيام
-                    </td>
-                    <td>
-                        6 أيام
-                    </td>
-                    <td>
-                        12 أيام
-                    </td>
-                    <td>
-                        8 أيام
-                    </td>
-                </tr>
-                <tr>
-                    <td class="mainTR">
-                        سبب الطلب
-                    </td>
-                    <td>سبب الطلب</td>
-                    <td>سبب الطلب</td>
-                    <td>سبب الطلب</td>
-                    <td>سبب الطلب</td>
-                </tr>
-                <tr>
-                    <td class="mainTR">
-                        تاريخ التقديم
-                    </td>
-                    <td>2025-01-20</td>
-                    <td>2025-01-19</td>
-                    <td>2025-01-10</td>
-                    <td>2025-01-07</td>
-                </tr>
-                <tr>
-                    <td class="mainTR">
-                        حالة الطلب
-                    </td>
-                    <td>تحت الفحص</td>
-                    <td>مقبول</td>
-                    <td>مرفوض</td>
-                    <td>تحت المراجعة</td>
-                </tr>
-                <tr>
-                    <td class="mainTR">
-                        اسم الشركة
-                    </td>
-                    <td>QTAS</td>
-                    <td>Karwa</td>
-                    <td>QSSA</td>
-                    <td>QFAS</td>
-                </tr>
-                <tr>
-                    <td class="mainTR">
-                        اسم الجهة
-                    </td>
-                    <td>وزارة النقل</td>
-                    <td>قطر للطاقة</td>
-                    <td>وزارة الصحة</td>
-                    <td>وزارة البيئة</td>
-                </tr>
-                <tr>
-                    <td class="mainTR">
-                        اسم المتقدم
-                    </td>
-                    <td>سارة علي</td>
-                    <td>حسين القحطانى</td>
-                    <td>على المرى</td>
-                    <td>خليل الهوارى</td>
-                </tr>
-                <tr>
-                    <td class="mainTR">رقم الطلب</td>
-                    <td>REQ-2025-10987</td>
-                    <td>REQ-2025-65985</td>
-                    <td>REQ-2025-10257</td>
-                    <td>REQ-2025-25867</td>
-                </tr>
-            </tbody>
-        </table>
+            <table class="requestsTable">
+                <tbody>
+                    <tr>
+                        <td class="mainTR">
+                            تاريخ الإستحقاق
+                        </td>
+                        <td>2025-01-20</td>
+                        <td>2025-01-19</td>
+                        <td>2025-01-10</td>
+                        <td>2025-01-07</td>
+                    </tr>
+                    <tr>
+                        <td class="mainTR">
+                            الأولوية
+                        </td>
+                        <td>وزارة النقل</td>
+                        <td>قطر للطاقة</td>
+                        <td>وزارة الصحة</td>
+                        <td>وزارة البيئة</td>
+                    </tr>
+                    <tr>
+                        <td class="mainTR">
+                            الفئة 
+                        </td>
+                        <td>سارة علي</td>
+                        <td>حسين القحطانى</td>
+                        <td>على المرى</td>
+                        <td>خليل الهوارى</td>
+                    </tr>
+                    <tr>
+                        <td class="mainTR">
+                            إسم المهمة
+                        </td>
+                        <td>REQ-2025-10987</td>
+                        <td>REQ-2025-65985</td>
+                        <td>REQ-2025-10257</td>
+                        <td>REQ-2025-25867</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <section class="tableSection">
+            <div class="checkAll">
+                <div class="checkAllIC">
+                    <i class="bi bi-box-arrow-in-up-left"></i>
+                    <h3>
+                        الطلبات
+                    </h3>
+                </div>
+            </div>
+            <table class="requestsTable">
+                <tbody>
+                    <tr>
+                        <td class="mainTR">
+                            مالك البيانات
+                        </td>
+                        <td>
+                            إدارة الإحصاءات
+                        </td>
+                        <td>
+                            مدير إدارة نظم المعلومات
+                        </td>
+                        <td>
+                            إدارة التعدادات والمسوح والأساليب الإحصائية
+                        </td>
+                        <td>
+                            مدير إدارة نظم المعلومات
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="mainTR">
+                            اسم الجهة
+                        </td>
+                        <td>وزارة النقل</td>
+                        <td>قطر للطاقة</td>
+                        <td>وزارة الصحة</td>
+                        <td>وزارة البيئة</td>
+                    </tr>
+                    <tr>
+                        <td class="mainTR">
+                            طالب البيانات
+                        </td>
+                        <td>سارة علي</td>
+                        <td>حسين القحطانى</td>
+                        <td>على المرى</td>
+                        <td>خليل الهوارى</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
     </section>
     <div class="noMobile">
         .لم يتم بعد تجهيز نسخة الهاتف من هذه الصفحة, يمكنك التصفح بإستخدام جهاز الحاسوب فقط.

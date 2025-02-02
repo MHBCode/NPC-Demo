@@ -3,20 +3,20 @@ const ctx = document.getElementById('requestsChart').getContext('2d');
 const data = {
   labels: [
     ' مفتوح ',
-    ' تحت المراجعه ',
-    ' اعيد للتعديل ',
-    ' قيد اعداد الاتفاقيه',
-    ' مغلق '
+    ' تحت المراجعة ',
+    ' أعيد للتعديل ',
+    ' يتم إعداد الاتفاقية ',
+    ' مغلق ',
   ],
   datasets: [{
     label: 'عدد الطلبات',
-    data: [7, 21, 14, 8, 12],
+    data: [2, 3, 4, 5, 6],
     backgroundColor: [
-      '#8C0E0F', // Red
+      '#c0c0c0', // Red
       '#1a5276', // Dark Blue
       '#2980b9', // Blue
       '#aed6f1',  // Dark Red
-      '#d98880'  // Gold
+      '#b5395e'
     ],
     hoverOffset: 4,
     borderWidth: 0
@@ -35,7 +35,7 @@ const config = {
         rtl: true,
         labels: {
           usePointStyle: true, // Use circle markers instead of squares
-          padding: 20, // Adjust padding between text and marker
+          padding: 10, // Adjust padding between text and marker
           font: {
             family: "Verdana, Geneva, Tahoma, sans-serif", // Arabic-friendly font
             size: 14
