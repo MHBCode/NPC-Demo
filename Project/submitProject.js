@@ -1,16 +1,3 @@
-// Function to switch between tabs
-function showTab(tabId) {
-    const tabs = document.querySelectorAll('.tab-content');
-    tabs.forEach(tab => {
-        tab.style.display = 'none';
-        tab.classList.remove('active');
-    });
-
-    const activeTab = document.getElementById(tabId);
-    activeTab.style.display = 'block';
-    activeTab.classList.add('active');
-}
-
 // Function to submit the form data to the specified Power Automate Cloud Flow URL
 function submitForm() {
     const form = document.getElementById('dataRequestForm');
@@ -21,8 +8,8 @@ function submitForm() {
         data[key] = value;
     });
 
-    data['DataClassification'] = parseInt(data['DataClassification']);
-    data['Frequency'] = parseInt(data['Frequency']);
+    // data['DataClassification'] = parseInt(data['DataClassification']);
+    // data['Frequency'] = parseInt(data['Frequency']);
 
     var jsonObj = {
         "FullName": "John Doe",
@@ -41,14 +28,14 @@ function submitForm() {
         "Duration": "6 months"
       };
 
-      var fixedstrinObj = JSON.stringify(jsonObj);
+    //   var fixedstrinObj = JSON.stringify(jsonObj);
       var dynamicStrinObj = JSON.stringify(data);
 
-      console.log("fixedStrinObj :", fixedstrinObj);
+    //   console.log("fixedStrinObj :", fixedstrinObj);
       console.log("dynamicdata :", data);
       console.log("dynamicStrinObj :", dynamicStrinObj);
 
-    fetch('https://prod-94.westeurope.logic.azure.com:443/workflows/9e300f20cabf434fb082a302c3fa8479/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=CeXYBPURo0oTAsIFMs96_Guem2C8vhLmMmRYK5JloCc', {
+    fetch('https://prod-31.westeurope.logic.azure.com:443/workflows/c9aa1042e2ca41a69fef0bd72f070365/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=iyRiT0kPrZJdnBLQaytsDINk7cmXRdGHrDrk3FU-qXg', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -58,7 +45,7 @@ function submitForm() {
     .then(response => {
         if (response.ok) {
             console.log("response :", response);
-            alert('Form submitted successfully!');
+            alert('Project submitted successfully!');
         } else {
             alert('Error submitting form.');
         }

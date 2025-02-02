@@ -30,53 +30,137 @@
             <button onclick="switchLanguage('en')">English</button>
             <button onclick="switchLanguage('ar')">العربية</button>
         </div> -->
-        <h1 id="formTitle">External Data Sharing Request </h1>
+        <h1 id="formTitle">Create Project</h1>
         <form id="dataRequestForm">
             <section>
-                <h2 id="personalInfoTitle">Requestor Information</h2>
-                <div class="form-group" style="margin-left: 10px;">
-                    <label for="fullName" id="fullNameLabel">Full Name</label>
-                    <input type="text" id="fullName" name="FullName" required>
+                <h2 id="ProjectInfoTitle">Project Information</h2>
+
+                <div class="flex-500">
+                    <div class="form-group width-50">
+                        <label for="Name" id="NameLabel">Name</label>
+                        <input type="text" id="Name" name="Name" required>
+                    </div>
+    
+                    <div class="form-group width-50">
+                        <label for="EnglishName" id="EnglishNameLabel">English Name</label>
+                        <input type="text" id="EnglishName" name="EnglishName" required>
+                    </div>
                 </div>
 
-                <div class="form-group width-45-first">
-                    <label for="emailAddress" id="emailLabel">Email Address</label>
-                    <input type="email" id="emailAddress" name="EmailAddress" required>
-                </div>
-                <div class="form-group width-45">
-                    <label for="phoneNumber" id="phoneLabel">Phone Number</label>
-                    <input type="text" id="phoneNumber" name="PhoneNumber" required>
+                <div class="flex-500">
+                    <div class="form-group  width-50">
+                        <label for="ConfidentialProjectType" id="ConfidentialProjectTypeLabel">Confidential Project</label>
+                        <select id="ConfidentialProjectType" name="ConfidentialProjectType" required>
+                            <option value="0">Select...</option>
+                            <option value="0">لا</option>
+                            <option value="1">نعم</option>
+                        </select>
+                    </div>
+    
+                    <div class="form-group  width-50">
+                        <label for="Priority" id="PriorityLabel">Priority</label>
+                        <select id="Priority" name="Priority" required>
+                            <option value="0">Select...</option>
+                            <option value="0">Low</option>
+                            <option value="1">Normal</option>
+                            <option value="2">High</option>
+                        </select>
+                    </div>
                 </div>
 
-                <div class="form-group width-45-first">
-                    <label for="jobTitle" id="jobTitleLabel">Job Title</label>
-                    <input type="text" id="jobTitle" name="JobTitle" required>
-                </div>
-                <div class="form-group width-45">
-                    <label for="departmentName" id="deptNameLabel">Department Name</label>
-                    <input type="text" id="departmentName" name="DepartmentName" required>
+                <div class="flex-500">
+                    <div class="form-group width-50">
+                        <label for="Description" id="DescriptionLabel">Description</label>
+                        <textarea id="Description" name="Description" rows="5" required></textarea>
+                    </div>
+    
+                    <div class="form-group width-50">
+                        <label for="EnglishDescription" id="EnglishDescriptionLabel">English Description</label>
+                        <textarea id="EnglishDescription" name="EnglishDescription" rows="5" required></textarea>
+                    </div>
                 </div>
 
-                <div class="form-group width-45-first">
-                    <label for="sectionName" id="sectionLabel">Section Name</label>
-                    <input type="text" id="sectionName" name="SectionName" required>
+
+                <div class="flex-500">
+                    <div class="form-group width-50">
+                        <label for="ProjectType" id="ProjectTypeLabel">Project Type</label>
+                        <select id="ProjectType" name="ProjectType" required>
+                            <option value="0">Select...</option>
+                            <option value="876500000">Operating</option>
+                            <option value="876500002">Executing</option>
+                        </select>
+                    </div>
+    
+                    <div class="form-group width-50">
+                        <label for="Agency" id="AgencyLabel">Agency</label>
+                        <select id="Agency" name="Agency" required>
+                            <option value="0">Select...</option>
+                        </select>
+                    </div>
                 </div>
-                <div class="form-group width-45">
-                    <label for="departmentManager" id="deptManagerLabel">Department Manager</label>
-                    <input type="text" id="departmentManager" name="DepartmentManager" required>
+
+                <div class="flex-500">
+                    <div class="form-group width-50">
+                        <label for="ProjectManager" id="ProjectManagerLabel">Project Manager</label>
+                        <select id="ProjectManager" name="ProjectManager" required>
+                            <option value="0">Select...</option>
+                        </select>
+                    </div>
+    
+                    <div class="form-group width-50">
+                        <label for="ProjectOwner" id="ProjectOwnerLabel">Project Owner</label>
+                        <select id="ProjectOwner" name="ProjectOwner" required>
+                            <option value="0">Select...</option>
+                        </select>
+                    </div>
                 </div>
-            </section>
 
-
-            <section>
-                <h2 id="requestDetailsTitle">Data Sharing Request Details</h2>
-
-                <div class="form-group width-45-request-first">
-                    <label for="entityName" id="entityLabel">Entity Name</label>
-                    <select id="entityName" name="EntityName" required>
+                <div class="form-group">
+                    <label for="ProjectSponsor" id="ProjectSponsorLabel">Project Sponsor</label>
+                    <select id="ProjectSponsor" name="ProjectSponsor" required>
                         <option value="0">Select...</option>
                     </select>
                 </div>
+
+                <div class="flex-500">
+                    <div class="form-group width-50">
+                        <label for="Program" id="ProgramLabel">Program</label>
+                        <select id="Program" name="Program" required>
+                            <option value="0">Select...</option>
+                        </select>
+                    </div>
+    
+                    <div class="form-group width-50">
+                        <label for="Budget" id="BudgetLabel">Budget</label>
+                        <input type="text" id="Budget" name="Budget" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="Expected" id="ExpectedLabel" style="margin-bottom: 15px;">Expected</label>
+
+                    <div>
+                        <div class="form-group width-45-first">
+                            <label for="EstimatedStartDate" id="EstimatedStartDateLabel">Estimated Start Date</label>
+                            <input type="date" id="EstimatedStartDate" name="EstimatedStartDate" required>
+                        </div>
+    
+                        <div class="form-group width-45">
+                            <label for="FinishDate" id="FinishDateLabel">Finish Date</label>
+                            <input type="date" id="FinishDate" name="FinishDate" required>
+                        </div>
+                    </div>
+
+                </div>
+
+
+            </section>
+
+
+            <!-- <section>
+                <h2 id="requestDetailsTitle">Data Sharing Request Details</h2>
+
+
                 <div class="form-group width-45-request">
                     <label for="dataOwner" id="dataOwnerLabel">Data Owner Name</label>
                     <select id="dataOwner" name="DataOwner" required>
@@ -98,36 +182,16 @@
                         <option value="2">مقيد</option>
                         <option value="3">سري</option>
                         <option value="4">سري للغاية</option>
-
-                        <!-- <option value="1">Public</option>
-                        <option value="2">Confidential</option>
-                        <option value="3">Secret</option>
-                        <option value="4">Top Secret</option> -->
                       </select>
                 </div>
                 <div class="form-group"  style="width: 98.4%;">
                     <label for="frequency" id="freqLabel">Frequency of Data Sharing</label>
                     <input type="number" id="frequency" name="Frequency" required>
                 </div>
-                <div class="form-group">
-                    <label for="duration" id="durationLabel" style="margin-bottom: 15px;">State the Time Duration of Data Sharing</label>
 
-                    <div>
-                        <div class="form-group width-45-first">
-                            <label for="startDate" id="startDateLabel">من</label>
-                            <input type="date" id="startDate" name="StartDate" required>
-                        </div>
-    
-                        <div class="form-group width-45">
-                            <label for="endDate" id="endDateLabel">إلى</label>
-                            <input type="date" id="endDate" name="EndDate" required>
-                        </div>
-                    </div>
+            </section> -->
 
-                </div>
-            </section>
-
-            <button type="button" class="submit-button" onclick="submitForm()">Submit</button>
+            <button type="button" id="submitLabel" class="submit-button" onclick="submitForm()">Submit</button>
         </form>
     </div>
 
@@ -135,44 +199,48 @@
         function switchLanguage(lang) {
             const translations = {
                 en: {
-                    formTitle: "External Data Sharing Request",
-                    personalInfoTitle: "Requestor Information",
-                    fullNameLabel: "Full Name",
-                    emailLabel: "Email Address",
-                    phoneLabel: "Phone Number",
-                    jobTitleLabel: "Job Title",
-                    deptNameLabel: "Department Name",
-                    sectionLabel: "Section Name",
-                    deptManagerLabel: "Department Manager",
-                    
-                    requestDetailsTitle: "Data Sharing Request Details",
-                    entityLabel: "Entity Name",
-                    dataOwnerLabel: "Data Owner Name",
-                    dataDescLabel: "Please describe, as precisely as possible, the information you are requesting",
-                    reasonLabel: "Clearly state the reason of the request for sharing data",
-                    dataClassLabel: "State the Classification of the Data: (Public for general data, Confidential if data contains personal data)",
-                    freqLabel: "Frequency of Data Sharing",
-                    durationLabel: "State the Time Duration of Data Sharing"
+                    formTitle: "Create Project",
+                    ProjectInfoTitle: "Project Information",
+                    NameLabel: "Name",
+                    EnglishNameLabel: "English Name",
+                    ConfidentialProjectTypeLabel: "Confidential Project",
+                    PriorityLabel: "Priority",
+                    DescriptionLabel: "Description",
+                    EnglishDescriptionLabel: "English Description",
+                    ProjectTypeLabel: "Project Type",
+                    AgencyLabel: "Agency",
+                    ProjectManagerLabel: "Project Manager",
+                    ProjectOwnerLabel: "Project Owner",
+                    ProjectSponsorLabel: "Project Sponsor",
+                    ProgramLabel: "Program",
+                    ExpectedLabel: "Expected",
+                    EstimatedStartDateLabel: "Estimated Start Date",
+                    FinishDateLabel: "Finish Date",
+                    BudgetLabel: "Budget",
+
+                    submitLabel: "Submit",
                 },
                 ar: {
-                    formTitle: "طلب مشاركة بيانات داخل المجلس",
-                    personalInfoTitle: "معلومات مقدم الطلب",
-                    fullNameLabel: "الاسم بالكامل",
-                    emailLabel: "البريد الإلكترونى",
-                    phoneLabel: "\u0631\u0642\u0645 \u0627\u0644\u0647\u0627\u062a\u0641",
-                    jobTitleLabel: "\u0627\u0644\u0645\u0633\u0645\u0649 \u0627\u0644\u0648\u0638\u064a\u0641\u064a",
-                    deptNameLabel: "اسم الإدارة",
-                    sectionLabel: "اسم القسم",
-                    deptManagerLabel: "مدير الإدارة",
-                    
-                    requestDetailsTitle: "تفاصيل طلب مشاركة البيانات",
-                    entityLabel: "اسم الجهة",
-                    dataOwnerLabel: "اسم مالك البيانات",
-                    dataDescLabel: "يرجى وصف المعلومات المطلوبة بوضوح",
-                    reasonLabel: "الرجاء ذكر الغرض من طلب مشاركة البيانات",
-                    dataClassLabel: "الرجاء ذكر مستوى حساسية البيانات: (عامّة للبيانات العامّة, مقيّدة للبيانات التي تحتوي على بيانات شخصية)",
-                    freqLabel: "عدد مرات مشاركة البيانات",
-                    durationLabel: "تحديد المدة الزمنية لمشاركة البيانات"
+                    formTitle: "إنشاء مشروع",
+                    ProjectInfoTitle: "معلومات المشروع",
+                    NameLabel: "الاسم",
+                    EnglishNameLabel: "الاسم بالإنجليزية",
+                    ConfidentialProjectTypeLabel: "مشروع سري",
+                    PriorityLabel: "الأولوية",
+                    DescriptionLabel: "الوصف",
+                    EnglishDescriptionLabel: "الوصف بالإنجليزية",
+                    ProjectTypeLabel: "نوع المشروع",
+                    AgencyLabel: "الوكالة",
+                    ProjectManagerLabel: "مدير المشروع",
+                    ProjectOwnerLabel: "مالك المشروع",
+                    ProjectSponsorLabel: "راعي المشروع",
+                    ProgramLabel: "برنامج",
+                    ExpectedLabel: "المتوقع",
+                    EstimatedStartDateLabel: "تاريخ البدء المتوقع",
+                    FinishDateLabel: "تاريخ الانتهاء",
+                    BudgetLabel: "الميزانية",
+
+                    submitLabel: "تقديم",
                 }
             };
 
@@ -188,44 +256,83 @@
 
         switchLanguage('ar');
 
-        (getEntityNames = async () => {
-            const response = await fetch('https://prod-186.westeurope.logic.azure.com:443/workflows/03a77c8fb85b405b970bc4baef40b9db/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=pXZbb3AR1l_l9cibzAU5uPoegChDrB3utrLhd_0ZNyI',
+        (getPrograms = async () => {
+            const response = await fetch('https://prod-07.westeurope.logic.azure.com:443/workflows/cca08c1418b14231aa8afb33097b3a2f/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=gkAX_Ovaw37cxzMopCUjebzf--Ardj2Fbjqjj18swys',
              {        method: 'POST',
                         headers: {
                         'Content-Type': 'application/json'
                     }
             }
         );  
-            const entityNames = await response.json();
-            const entityNameSelect = document.getElementById('entityName');
-            entityNames.forEach(entityName => {
+            const Programs = await response.json();
+            const ProgramsSelect = document.getElementById('Program');
+            Programs.forEach(entityName => {
                 const option = document.createElement('option');
                 option.value = entityName.id;
                 option.textContent = entityName.Name;
-                entityNameSelect.appendChild(option);
+                ProgramsSelect.appendChild(option);
             });
-            console.log("entityNames", entityNames);
+            console.log("Programs", Programs);
         })();
 
-        (getDataOwnerNames = async () => {
-            const response = await fetch('https://prod-172.westeurope.logic.azure.com:443/workflows/2fe58a00efa348968b2ab7e2a688a7c3/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=OvSIPAazpplKpePllQEZaG419IhBUAmZ2clT-gyxe7g',
+        (getAgencies = async () => {
+            const response = await fetch('https://prod-96.westeurope.logic.azure.com:443/workflows/aef7ee9745a4401aa0a067675255caec/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=-pt_g-q_OQtcyEEM9w64XKS2sq2s0_3-jh51bqZdT5c',
              {        method: 'POST',
                         headers: {
                         'Content-Type': 'application/json'
                     }
             }
         );  
-            const dataOwnerNames = await response.json();
-            const dataOwnerNamesSelect = document.getElementById('dataOwner');
-            dataOwnerNames.forEach(entityName => {
+            const Agencies = await response.json();
+            const AgenciesSelect = document.getElementById('Agency');
+            Agencies.forEach(entityName => {
                 const option = document.createElement('option');
                 option.value = entityName.id;
                 option.textContent = entityName.Name;
-                dataOwnerNamesSelect.appendChild(option);
+                AgenciesSelect.appendChild(option);
             });
-            console.log("dataOwner", dataOwnerNames);
+            console.log("Agencies", Agencies);
         })();
 
+        (getOwnersNames = async () => {
+            const response = await fetch('https://prod-214.westeurope.logic.azure.com:443/workflows/169d17fff72a41888a48dcbe09e0a76d/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=_iNAqgevO91xpqDvB-Pkw_jDZ-DFbG_rDFUfVjmXsEc',
+             {        method: 'POST',     
+                        headers: {
+                        'Content-Type': 'application/json'
+                    }
+            }
+        );  
+            const OwnerNames = await response.json();
+
+            // owners
+            const ProjectOwnerSelect = document.getElementById('ProjectOwner');
+            OwnerNames.forEach(entityName => {
+                const option = document.createElement('option');
+                option.value = entityName.id;
+                option.textContent = entityName.Name;
+                ProjectOwnerSelect.appendChild(option);
+            });
+
+            // sponsers
+            const ProjectSponsorSelect = document.getElementById('ProjectSponsor');
+            OwnerNames.forEach(entityName => {
+                const option = document.createElement('option');
+                option.value = entityName.id;
+                option.textContent = entityName.Name;
+                ProjectSponsorSelect.appendChild(option);
+            });
+
+            // managers
+            const ProjectManagerSelect = document.getElementById('ProjectManager');
+            OwnerNames.forEach(entityName => {
+                const option = document.createElement('option');
+                option.value = entityName.id;
+                option.textContent = entityName.Name;
+                ProjectManagerSelect.appendChild(option);
+            });
+            
+            console.log("Owners", OwnerNames);
+        })();
 
     </script>
     
