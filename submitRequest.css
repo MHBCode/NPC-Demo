@@ -32,7 +32,7 @@ body {
 
 .userDataSection{
     display: flex;
-    background-color: #8A1538;
+    background: linear-gradient(135deg, #8A1538, #b30d34);
     flex-direction: row;
     gap: 0.5rem;
     color: white;
