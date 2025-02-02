@@ -338,6 +338,7 @@ tbody{
     border-radius: 18px;
     /* width: 48%; */
     flex: 1;
+    background: white;
 }
 .checkAll{
     width: 100%;
@@ -367,7 +368,7 @@ tbody{
     align-items: flex-start;
     width: 94vw;
     gap: 1.5rem;
-    background: white;
+    background: transparent;
 }
 tbody{
     background: white;
