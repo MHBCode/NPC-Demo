@@ -5,9 +5,13 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    /* font-family:Verdana, Geneva, Tahoma, sans-serif;
     font-weight: normal;
-    font-size: 14px;
+    font-size: 14px; */
+    
+    font-family: Lusail, Calibri;
+    font-weight: bold;
+    /* font-size: 17px; */
 }
 body{
     margin: 0;
@@ -97,6 +101,7 @@ body{
     border: none;
     border-radius: 15px;
     cursor: pointer;
+    margin: 0px 2px;
 }
 .btn-1:hover{
     background: linear-gradient(135deg, white, white);
@@ -134,7 +139,8 @@ body{
 }
 .dataCard{
     /* background-color: #867105; */
-    background: linear-gradient(135deg, #867105, #f2b705);
+    /* background: linear-gradient(135deg, #867105, #f2b705); */
+    background: #a79935a8;
 }
 .notificationList{
     flex-direction: column;
@@ -179,19 +185,23 @@ body{
     min-width: 40px;
 }
 .c-Confidential {
-    background: linear-gradient(135deg, #d31b15, #ff4d4a);
+    /* background: linear-gradient(135deg, #d31b15, #ff4d4a); */
+    background: #a79935a8;
 }
 
 .c-HighlyConfidential {
-    background: linear-gradient(135deg, #8B0000, #b22222);
+    /* background: linear-gradient(135deg, #8B0000, #b22222); */
+    background: #a79935a8;
 }
 
 .c-Public {
-    background: linear-gradient(135deg, #28A745, #5cd65c);
+    /* background: linear-gradient(135deg, #28A745, #5cd65c); */
+    background: #a79935a8;
 }
 
 .c-Restricted {
-    background: linear-gradient(135deg, #004085, #337ab7);
+    /* background: linear-gradient(135deg, #004085, #337ab7); */
+    background: #a79935a8;
 }
 
 .inProgressRequest{
@@ -228,7 +238,8 @@ body{
     padding: 3px 7px 5px;
     color: white;
     min-width: 40px;
-    background: linear-gradient(135deg, #1a5276, #146fac);
+    /* background: linear-gradient(135deg, #1a5276, #146fac); */
+    color: #8B0000;    
 }
 .lastUpdate{
     position: absolute;

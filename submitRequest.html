@@ -26,39 +26,42 @@
     </header>
 
     <div class="container">
-        <div class="lang-switch">
+        <!-- <div class="lang-switch">
             <button onclick="switchLanguage('en')">English</button>
             <button onclick="switchLanguage('ar')">العربية</button>
-        </div>
+        </div> -->
         <h1 id="formTitle">External Data Sharing Request </h1>
         <form id="dataRequestForm">
             <section>
                 <h2 id="personalInfoTitle">Requestor Information</h2>
-                <div class="form-group">
+                <div class="form-group" style="margin-left: 10px;">
                     <label for="fullName" id="fullNameLabel">Full Name</label>
                     <input type="text" id="fullName" name="FullName" required>
                 </div>
-                <div class="form-group">
+
+                <div class="form-group width-45-first">
                     <label for="emailAddress" id="emailLabel">Email Address</label>
                     <input type="email" id="emailAddress" name="EmailAddress" required>
                 </div>
-                <div class="form-group">
+                <div class="form-group width-45">
                     <label for="phoneNumber" id="phoneLabel">Phone Number</label>
                     <input type="text" id="phoneNumber" name="PhoneNumber" required>
                 </div>
-                <div class="form-group">
+
+                <div class="form-group width-45-first">
                     <label for="jobTitle" id="jobTitleLabel">Job Title</label>
                     <input type="text" id="jobTitle" name="JobTitle" required>
                 </div>
-                <div class="form-group">
+                <div class="form-group width-45">
                     <label for="departmentName" id="deptNameLabel">Department Name</label>
                     <input type="text" id="departmentName" name="DepartmentName" required>
                 </div>
-                <div class="form-group">
+
+                <div class="form-group width-45-first">
                     <label for="sectionName" id="sectionLabel">Section Name</label>
                     <input type="text" id="sectionName" name="SectionName" required>
                 </div>
-                <div class="form-group">
+                <div class="form-group width-45">
                     <label for="departmentManager" id="deptManagerLabel">Department Manager</label>
                     <input type="text" id="departmentManager" name="DepartmentManager" required>
                 </div>
@@ -68,42 +71,59 @@
             <section>
                 <h2 id="requestDetailsTitle">Data Sharing Request Details</h2>
 
-                <div class="form-group">
+                <div class="form-group width-45-request-first">
                     <label for="entityName" id="entityLabel">Entity Name</label>
                     <select id="entityName" name="EntityName" required>
                         <option value="0">Select...</option>
                     </select>
                 </div>
-                <div class="form-group">
+                <div class="form-group width-45-request">
                     <label for="dataOwner" id="dataOwnerLabel">Data Owner Name</label>
                     <select id="dataOwner" name="DataOwner" required>
                         <option value="0">Select...</option>
                     </select>
                 </div>
-                <div class="form-group">
+                <div class="form-group" style="margin-left: 11px;">
                     <label for="requestedDataDescription" id="dataDescLabel">Please describe, as precisely as possible, the information you are requesting </label>
                     <textarea id="requestedDataDescription" name="RequestedDataDescription" required></textarea>
                 </div>
-                <div class="form-group">
+                <div class="form-group" style="margin-left: 11px;">
                     <label for="reasonForRequest" id="reasonLabel">Clearly state the reason of the request for sharing data</label>
                     <textarea id="reasonForRequest" name="ReasonForRequest" required></textarea>
                 </div>
                 <div class="form-group">
                     <label for="dataClassification" id="dataClassLabel">State the Classification of the Data: (Public for general data, Confidential if data contains personal data)</label>
-                    <select id="dataClassification" name="DataClassification" required>
-                        <option value="1">Public</option>
+                    <select id="dataClassification" name="DataClassification" required style="width: 98.4%;">
+                        <option value="1">عام</option>
+                        <option value="2">مقيد</option>
+                        <option value="3">سري</option>
+                        <option value="4">سري للغاية</option>
+
+                        <!-- <option value="1">Public</option>
                         <option value="2">Confidential</option>
                         <option value="3">Secret</option>
-                        <option value="4">Top Secret</option>
+                        <option value="4">Top Secret</option> -->
                       </select>
                 </div>
-                <div class="form-group">
+                <div class="form-group"  style="width: 98.4%;">
                     <label for="frequency" id="freqLabel">Frequency of Data Sharing</label>
                     <input type="number" id="frequency" name="Frequency" required>
                 </div>
                 <div class="form-group">
-                    <label for="duration" id="durationLabel">State the Time Duration of Data Sharing</label>
-                    <input type="text" id="duration" name="Duration" required>
+                    <label for="duration" id="durationLabel" style="margin-bottom: 15px;">State the Time Duration of Data Sharing</label>
+
+                    <div>
+                        <div class="form-group width-45-first">
+                            <label for="startDate" id="startDateLabel">من</label>
+                            <input type="date" id="startDate" name="StartDate" required>
+                        </div>
+    
+                        <div class="form-group width-45">
+                            <label for="endDate" id="endDateLabel">إلى</label>
+                            <input type="date" id="endDate" name="EndDate" required>
+                        </div>
+                    </div>
+
                 </div>
             </section>
 
@@ -165,6 +185,8 @@
             html.dir = lang == 'en'? 'ltr': 'rtl';
         }
 
+        switchLanguage('ar');
+
         (getEntityNames = async () => {
             const response = await fetch('https://prod-186.westeurope.logic.azure.com:443/workflows/03a77c8fb85b405b970bc4baef40b9db/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=pXZbb3AR1l_l9cibzAU5uPoegChDrB3utrLhd_0ZNyI',
              {        method: 'POST',
@@ -200,7 +222,7 @@
                 option.textContent = entityName.Name;
                 dataOwnerNamesSelect.appendChild(option);
             });
-            console.log("dataOwner", entityNames);
+            console.log("dataOwner", dataOwnerNames);
         })();
 
 
