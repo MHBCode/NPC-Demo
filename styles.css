@@ -83,7 +83,7 @@ body{
     width: 100%;
 }
 .greetingsSection{
-    width: 94%;
+    width: 100%;
     flex-direction: row;
     justify-content: space-between;
     flex-wrap: wrap;
