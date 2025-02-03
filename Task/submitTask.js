@@ -21,8 +21,8 @@ function submitForm() {
         data[key] = value;
     });
 
-    // data['DataClassification'] = parseInt(data['DataClassification']);
-    // data['Frequency'] = parseInt(data['Frequency']);
+    data['Priority'] = parseInt(data['Priority']);
+    data['TaskCategory'] = parseInt(data['TaskCategory']);
 
     var jsonObj = {
         "FullName": "John Doe",
@@ -58,7 +58,7 @@ function submitForm() {
     .then(response => {
         if (response.ok) {
             console.log("response :", response);
-            alert('Task created successfully!');
+            alert('تم إنشاء المهمة بنجاح.');
         } else {
             alert('Error submitting form.');
         }

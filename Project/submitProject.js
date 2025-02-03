@@ -45,7 +45,7 @@ function submitForm() {
     .then(response => {
         if (response.ok) {
             console.log("response :", response);
-            alert('Project submitted successfully!');
+            alert('تم إنشاء المشروع بنجاح.');
         } else {
             alert('Error submitting form.');
         }
