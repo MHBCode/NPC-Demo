@@ -115,11 +115,20 @@
                     </div>
                 </div>
 
-                <div class="form-group">
-                    <label for="ProjectSponsor" id="ProjectSponsorLabel">Project Sponsor</label>
-                    <select id="ProjectSponsor" name="ProjectSponsor" required>
-                        <option value="0">اختر...</option>
-                    </select>
+                <div class="flex-500">
+                    <div class="form-group width-50">
+                        <label for="ProjectSponsor" id="ProjectSponsorLabel">Project Sponsor</label>
+                        <select id="ProjectSponsor" name="ProjectSponsor" required>
+                            <option value="0">اختر...</option>
+                        </select>
+                    </div>
+    
+                    <div class="form-group width-50">
+                        <label for="Sector" id="SectorLabel">Sector</label>
+                        <select id="Sector" name="Sector" required>
+                            <option value="0">اختر...</option>
+                        </select>
+                    </div>
                 </div>
 
                 <div class="flex-500">
@@ -212,6 +221,7 @@
                     ProjectManagerLabel: "Project Manager",
                     ProjectOwnerLabel: "Project Owner",
                     ProjectSponsorLabel: "Project Sponsor",
+                    SectorLabel: "Sector",
                     ProgramLabel: "Program",
                     ExpectedLabel: "Expected",
                     EstimatedStartDateLabel: "Estimated Start Date",
@@ -221,7 +231,7 @@
                     submitLabel: "Submit",
                 },
                 ar: {
-                    formTitle: "إنشاء مشروع",
+                    formTitle: "طلب مشروع جديد",
                     ProjectInfoTitle: "معلومات المشروع",
                     NameLabel: "الاسم",
                     EnglishNameLabel: "الاسم بالإنجليزية",
@@ -234,6 +244,7 @@
                     ProjectManagerLabel: "مدير المشروع",
                     ProjectOwnerLabel: "مالك المشروع",
                     ProjectSponsorLabel: "راعي المشروع",
+                    SectorLabel: "قسم",
                     ProgramLabel: "برنامج",
                     ExpectedLabel: "المتوقع",
                     EstimatedStartDateLabel: "تاريخ البدء المتوقع",
@@ -293,6 +304,26 @@
             });
             console.log("Agencies", Agencies);
         })();
+
+        (getSectors = async () => {
+            const response = await fetch('https://prod-46.westeurope.logic.azure.com:443/workflows/e4b1286a88c94268a84c6f1e00a1533d/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=Gt0zgYM51AfnZtkXjbFnr49xlvC0Vcbjj4tbQ4d__fQ',
+             {        method: 'POST',
+                        headers: {
+                        'Content-Type': 'application/json'
+                    }
+            }
+        );  
+            const Sectors = await response.json();
+            const SectorsSelect = document.getElementById('Sector');
+            Sectors.forEach(entityName => {
+                const option = document.createElement('option');
+                option.value = entityName.id;
+                option.textContent = entityName.Name;
+                SectorsSelect.appendChild(option);
+            });
+            console.log("Sectors", Sectors);
+        })();
+
 
         (getOwnersNames = async () => {
             const response = await fetch('https://prod-214.westeurope.logic.azure.com:443/workflows/169d17fff72a41888a48dcbe09e0a76d/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=_iNAqgevO91xpqDvB-Pkw_jDZ-DFbG_rDFUfVjmXsEc',

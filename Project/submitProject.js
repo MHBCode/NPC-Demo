@@ -8,8 +8,9 @@ function submitForm() {
         data[key] = value;
     });
 
-    // data['DataClassification'] = parseInt(data['DataClassification']);
-    // data['Frequency'] = parseInt(data['Frequency']);
+     data['ConfidentialProjectType'] = parseInt(data['ConfidentialProjectType']);
+     data['Priority'] = parseInt(data['Priority']);
+     data['ProjectType'] = parseInt(data['ProjectType']);
 
     var jsonObj = {
         "FullName": "John Doe",
@@ -45,7 +46,7 @@ function submitForm() {
     .then(response => {
         if (response.ok) {
             console.log("response :", response);
-            alert('تم إنشاء المشروع بنجاح.');
+            alert('تم تقديم الطلب بنجاح.');
         } else {
             alert('Error submitting form.');
         }
